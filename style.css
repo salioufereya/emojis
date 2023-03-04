@@ -1,0 +1,406 @@
+body {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    gap: 10px;
+    flex-direction: column;
+
+
+}
+
+.barre {
+    width: 100%;
+    height: 15%;
+    background-color: rgb(8, 0, 0);
+    display: flex;
+
+    text-align: center;
+    position: relative;
+}
+
+.barre .pointille {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 20px dotted aliceblue;
+    position: relative;
+    top: -45%;
+
+
+
+}
+
+.path {
+    height: 50%;
+    width: 4%;
+    position: relative;
+    background-color: yellow;
+    border-radius: 50%;
+    left: 0;
+    top: 20%;
+    animation: example 15s linear infinite;
+    
+}
+
+.fantome {
+    height: 50%;
+    width: 4%;
+    position: relative;
+    background-color: blue;
+    border-radius: 20px 20px 0 0;
+    left: 0;
+    top: 20%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: example 15s linear infinite, couleurFantom 10s infinite;
+
+}
+
+.fantome::before {
+    content: '';
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background: linear-gradient(-45deg, black 12px, transparent 0%), linear-gradient(45deg, black 12px, transparent 0%);
+    background-size: 24px;
+    animation: couleurFantom 10s infinite;
+
+
+}
+
+.triangle {
+    height: 50%;
+    width: 5%;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    background-color: black;
+    clip-path: polygon(100% 90%, 100% 13%, 28% 50%);
+    animation: example 15s linear infinite, anime3 1s linear infinite;
+
+
+
+}
+
+.emos {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+
+}
+
+.tete {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 140px;
+    height: 140px;
+    border: 5px solid rgba(238, 231, 195, 0.934);
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow: rgb(229, 193, 11) inset; 
+    background-image: linear-gradient(yellow, rgb(159,135,13)); 
+}
+
+.tete1 {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.tete3 {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+
+}
+
+.yeuxEmo1 {
+    width: 30px;
+    height: 30px;
+    background-color: #F8F7ED;
+    border: 2px solid #EEEDE1;
+    border-radius: 50%;
+    animation: animeBeut 2s linear infinite;
+}
+
+/*animate0 */
+.yeuxEmo0 {
+    width: 30px;
+    height: 30px;
+    margin-top: 15%;
+    background-color: #F8F7ED;
+    border: 2px solid #EEEDE1;
+    border-radius: 50%;
+    animation:  animeBeut0 1s linear infinite;
+    
+}
+/* Fin animate0 */
+.yeuxEmo2 {
+    width: 30px;
+    height: 30px;
+
+    background-color: #F8F7ED;
+    border: 2px solid #EEEDE1;
+    border-radius: 50%;
+
+}
+
+.bouche {
+
+    height: 10px;
+    width: 30%;
+    border-radius: 25%;
+    background-color: rgb(73, 64, 64);
+}
+
+.bouche2 {
+
+    height: 25%;
+    width: 50%;
+    border-radius: 0 0 50% 50%;
+    background-color: rgb(65, 65, 2);
+    position: relative;
+}
+
+.langue {
+    width: 50%;
+    height: 110%;
+    background-color: rgb(174, 10, 125);
+    position: absolute;
+    left: 25%;
+    top: 40%;
+    border-radius: 0 0 50% 50%;
+}
+
+.bouchTrait {
+
+    height: 25%;
+    width: 50%;
+    border-radius: 50% 50% 0 0;
+    border: 5px solid rgb(9, 3, 3);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+
+}
+
+
+.pointNoir1 {
+    width: 5px;
+    height: 7px;
+    position: relative;
+    top: 0%;
+    margin-left: 10px;
+    background-color: black;
+    border: 2px solid rgb(100, 99, 99);
+    border-radius: 50%;
+
+}
+
+.pointNoir11 {
+    width: 5px;
+    height: 7px;
+    position: relative;
+    top: 0%;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: red;
+    border-radius: 50%;
+
+}
+
+.pointNoir12 {
+    width: 5px;
+    height: 7px;
+    position: relative;
+    top: 0%;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: blue;
+    border-radius: 50%;
+
+}
+
+.pointNoir2 {
+    margin-top: 30%;
+    width: 8px;
+    height: 7px;
+    margin-left: 10px;
+    background-color: black;
+    border: 2px solid rgb(100, 99, 99);
+    border-radius: 50%;
+}
+
+.oilFerme {
+    margin-top: 30%;
+    width: 30px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.beutNdaw {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+
+
+@keyframes example {
+    0% {
+
+        left: 0;
+    }
+
+
+    100% {
+
+        left: 100%;
+    }
+}
+
+@keyframes example2 {
+    0% {
+
+        left: -5%;
+    }
+
+
+    100% {
+
+        left: 100%;
+    }
+}
+
+
+@keyframes anime3 {
+    0% {
+
+        clip-path: polygon(100% 90%, 100% 13%, 28% 50%);
+    }
+
+    25% {
+
+
+
+        clip-path: polygon(99% 50%, 100% 49%, 28% 50%);
+    }
+
+
+    75% {
+        clip-path: polygon(100% 90%, 100% 13%, 28% 50%);
+
+    }
+
+
+    100% {
+        clip-path: polygon(99% 50%, 100% 49%, 28% 50%);
+    }
+}
+
+
+
+
+
+
+@keyframes couleurFantom {
+    0% {
+
+        background-color: blue;
+    }
+
+    10% {
+
+
+
+        background-color: red
+    }
+
+
+    20% {
+        background-color: blue;
+
+    }
+
+    30% {
+        background-color: red;
+
+    }
+
+    40% {
+        background-color: blue;
+    }
+
+    50% {
+        background-color: red;
+
+    }
+
+    60% {
+        background-color: blue;
+
+    }
+
+
+    70% {
+        background-color: brown;
+    }
+
+    80% {
+        background-color: blue;
+
+    }
+
+    90% {
+        background-color: red;
+
+    }
+
+
+    100% {
+        background-color: blue;
+    }
+}
+
+
+@keyframes animeBeut {
+    0% {
+
+        transform: rotate(0deg);
+    }
+
+
+    100% {
+
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes animeBeut0 {
+    0% {
+
+        transform: rotate(0);
+    }
+
+
+    100% {
+
+        transform: rotate(90deg);
+    }
+}

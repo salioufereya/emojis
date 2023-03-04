@@ -12,39 +12,86 @@ body {
 }
 
 .barre {
-    width: 80%;
-    margin: auto;
+    width: 100%;
      height: 15%;
     background-color: rgb(8, 0, 0);
     display: flex;
-overflow: hidden;
+    overflow: hidden;
     text-align: center;
     position: relative;
+    
 }
 
-.barre .pointille {
-    width: 100%;
+.pointille {
+    width: 90%;
+    margin-left: 5%;
     border-bottom: 20px dotted aliceblue;
-    position: relative;
-    top: -45%;
-    margin-right: 8%;
+    position: absolute;
+    height: 5%;
+    top: 3%;
+    z-index: inherit;
+ 
 
 
 
 }
 
 .path {
-    height: 50%;
-    width: 4%;
+    height: 100px;
+    width: 200px;
     position: relative;
-    background-color: yellow;
-    border-radius: 50%;
     left: 0;
     top: 20%;
+    /* background-color: red; */
     animation: example 15s linear infinite;
-    /* margin-left: 5%; */
+    z-index: 2;
+   
     
 }
+
+
+.path::after{
+    content: "";
+    height: 50px;
+    width: 120px;
+    position: absolute;
+    background-color: yellow;
+    border-radius: 40% 40% 0 0;
+    animation: cercleAfter 1s ease-in-out infinite;
+    
+   
+}
+
+
+
+
+
+ .path::before{
+    content: "";
+    width: 120px;
+    height: 50px;
+    border-radius:0 0 50% 50% ;
+    position: absolute;
+   top:50%;
+    background-color: yellow;
+    
+    animation: cercleBefore 1s linear infinite;
+} 
+
+
+
+
+/* .path::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    bottom: 100;
+    transform: rotate(90deg);
+    background-color: rgb(51, 255, 0);
+   
+} */
 
 .fantome {
     height: 50%;
@@ -56,9 +103,8 @@ overflow: hidden;
     top: 20%;
     z-index: 2;
     display: flex;
-    margin-left: 3%;
+    margin-left: 5%;
     align-items: center;
-    
     justify-content: center;
     animation: example 15s linear infinite, couleurFantom 10s infinite;
 
@@ -78,7 +124,7 @@ overflow: hidden;
 
 }
 
-.triangle {
+/* .triangle {
     height: 50%;
     width: 5%;
     position: absolute;
@@ -90,7 +136,7 @@ overflow: hidden;
 
 
 
-}
+} */
 
 .emos {
     display: flex;
@@ -109,8 +155,8 @@ overflow: hidden;
     justify-content: center;
     gap: 10px;
     width: 180px;
-    height: 140px;
-    /* border: 5px solid rgba(247, 207, 6, 0.934); */
+    height: 150px;
+    border: 5px solid rgba(247, 135, 6, 0.934); 
     border-radius: 50%;
     background-color: yellow;
     box-shadow:inset 0 4px 40px 39px #FFA30A;
@@ -121,7 +167,7 @@ overflow: hidden;
 .tete1 {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 10px;
 }
 
 .tete3 {
@@ -135,8 +181,9 @@ overflow: hidden;
     width: 30px;
     height: 30px;
     background-color: #F8F7ED;
-    border: 2px solid #EEEDE1;
+    border: 2px solid #bdbdbc;
     border-radius: 50%;
+  
     animation: animeBeut 2s linear infinite;
 }
 
@@ -299,7 +346,7 @@ overflow: hidden;
 }
 
 
-@keyframes anime3 {
+/* @keyframes anime3 {
     0% {
 
         clip-path: polygon(100% 90%, 100% 13%, 28% 50%);
@@ -322,9 +369,31 @@ overflow: hidden;
     100% {
         clip-path: polygon(99% 50%, 100% 49%, 28% 50%);
     }
-}
+} */
 
 
+@keyframes cercleAfter {
+    0% {
+
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+} 
+
+
+@keyframes cercleBefore{
+    0% {
+
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+} 
 
 
 

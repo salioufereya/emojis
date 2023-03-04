@@ -12,21 +12,22 @@ body {
 }
 
 .barre {
-    width: 100%;
-    height: 15%;
+    width: 80%;
+    margin: auto;
+     height: 15%;
     background-color: rgb(8, 0, 0);
     display: flex;
-
+overflow: hidden;
     text-align: center;
     position: relative;
 }
 
 .barre .pointille {
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
     border-bottom: 20px dotted aliceblue;
     position: relative;
     top: -45%;
+    margin-right: 8%;
 
 
 
@@ -41,6 +42,7 @@ body {
     left: 0;
     top: 20%;
     animation: example 15s linear infinite;
+    /* margin-left: 5%; */
     
 }
 
@@ -54,7 +56,9 @@ body {
     top: 20%;
     z-index: 2;
     display: flex;
+    margin-left: 3%;
     align-items: center;
+    
     justify-content: center;
     animation: example 15s linear infinite, couleurFantom 10s infinite;
 
@@ -106,11 +110,12 @@ body {
     gap: 10px;
     width: 140px;
     height: 140px;
-    border: 5px solid rgba(238, 231, 195, 0.934);
+    /* border: 5px solid rgba(247, 207, 6, 0.934); */
     border-radius: 50%;
     background-color: yellow;
-    box-shadow: rgb(229, 193, 11) inset; 
-    background-image: linear-gradient(yellow, rgb(159,135,13)); 
+    box-shadow:inset 0 4px 40px 39px #FFA30A;
+    /* box-shadow: rgb(229, 193, 11) inset;  */
+    /* background-image: linear-gradient(yellow, rgb(247,135,13));  */
 }
 
 .tete1 {
@@ -170,14 +175,17 @@ body {
     height: 25%;
     width: 50%;
     border-radius: 0 0 50% 50%;
-    background-color: rgb(65, 65, 2);
+     background-color: yellow;
+     box-shadow:inset 0 4px 40px 39px #FFA30A;
+    
+     opacity: 0.7;
     position: relative;
 }
 
 .langue {
     width: 50%;
     height: 110%;
-    background-color: rgb(174, 10, 125);
+    background-color: rgb(219, 117, 189);
     position: absolute;
     left: 25%;
     top: 40%;
